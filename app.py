@@ -8,8 +8,8 @@ rent_model = joblib.load("rent_pipeline.pkl")
 pg_model = joblib.load("pg_price_pipeline.pkl")  # updated pg pipeline
 fare_model = joblib.load("fare_pipeline.pkl")
 
-# OpenCage API key
-API_KEY = '3c74f1a176c048acaba383a7d8b886b8'
+# Access OpenCage API key from Streamlit secrets
+API_KEY = st.secrets["general"]["API_KEY"]  # Access secret from Streamlit's secrets
 
 # Static Food Cost (₹ per month)
 food_cost_dict = {
