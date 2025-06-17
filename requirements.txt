@@ -1,5 +1,5 @@
-﻿joblib==1.3.2
+﻿joblib
 pandas
 requests
 streamlit
-scikit-learn==1.3.2
+scikit-learn
