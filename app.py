@@ -2,11 +2,21 @@ import streamlit as st
 import pandas as pd
 import joblib
 import requests
+import cloudpickle  # Use cloudpickle instead of joblib
 
-# Load saved models
-rent_model = joblib.load("rent_pipeline.pkl")
-pg_model = joblib.load("pg_price_pipeline.pkl")  # updated pg pipeline
-fare_model = joblib.load("fare_pipeline.pkl")
+# Load saved models using cloudpickle
+with open("rent_pipeline.pkl", "rb") as f:
+    rent_model = cloudpickle.load(f)
+
+with open("pg_price_pipeline.pkl", "rb") as f:
+    pg_model = cloudpickle.load(f)
+
+with open("fare_pipeline.pkl", "rb") as f:
+    fare_model = cloudpickle.load(f)
+# # Load saved models
+# rent_model = joblib.load("rent_pipeline.pkl")
+# pg_model = joblib.load("pg_price_pipeline.pkl")  # updated pg pipeline
+# fare_model = joblib.load("fare_pipeline.pkl")
 
 # Access OpenCage API key from Streamlit secrets
 API_KEY = st.secrets["general"]["API_KEY"]  # Access secret from Streamlit's secrets
