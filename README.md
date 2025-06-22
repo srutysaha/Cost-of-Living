@@ -1,6 +1,6 @@
 # 🏙️ Cost of Living Predictor
 
-A comprehensive machine learning application that predicts **Rental Prices**, **PG (Paying Guest) Accommodation Rates**, and **Uber Fare Estimates** based on various features such as location, amenities, time, and more. The project utilizes data pipelines and trained models deployed via **Streamlit** for user-friendly web access.
+A comprehensive machine learning application that predicts **Rental Prices**, **PG (Paying Guest) Accommodation Rates**, and **Travel Fare Estimates** based on various features such as location, amenities, time, and more. The project utilizes data pipelines and trained models deployed via **Streamlit** for user-friendly web access.
 
 ---
 
@@ -9,7 +9,7 @@ A comprehensive machine learning application that predicts **Rental Prices**, **
 This project aims to provide users with an estimated cost of living in major Indian cities by combining multiple predictive models:
 - 🏠 **Rent Predictor** (Random Forest)
 - 🛏️ **PG Price Estimator** (Decision Tree)
-- 🚕 **Uber Fare Calculator** (Random Forest)
+- 🚕 **Travel Fare Calculator** (Random Forest)
 
 ---
 
@@ -17,7 +17,7 @@ This project aims to provide users with an estimated cost of living in major Ind
 
 - Predict rent based on BHK, furnishing, location, area, etc.
 - Estimate PG accommodation costs based on gender, amenities, and city.
-- Forecast Uber fare using pickup/drop coordinates and passenger count.
+- Forecast Travel fare using pickup/drop coordinates and passenger count.
 - User-friendly interface built using Streamlit.
 - Interactive visualizations for model insights.
 
@@ -65,7 +65,7 @@ cost-of-living/
 2. Enter your inputs in the sidebar:
    - Rent: city, type, furnishing, BHK, etc.
    - PG: city, gender, food/wifi/AC availability
-   - Transportation: location, passenger count
+   - Travel: location, passenger count
 3. Click **"Predict"** to see the estimated prices.
 
 No installation required — works directly in your browser!
