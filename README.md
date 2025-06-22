@@ -39,6 +39,7 @@ This project aims to provide users with an estimated cost of living in major Ind
 
 ## 📂 Directory Structure
 
+ ```bash
 cost-of-living/
 ├── app.py # Streamlit app
 ├── rent_pipeline.pkl # Trained Rent model
