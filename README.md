@@ -39,7 +39,7 @@ This project aims to provide users with an estimated cost of living in major Ind
 
 ## 📂 Directory Structure
 
- ```bash
+ ``` bash
 cost-of-living/
 ├── app.py # Streamlit app
 ├── rent_pipeline.pkl # Trained Rent model
@@ -50,9 +50,10 @@ cost-of-living/
 ├── uber.csv # Dataset: Uber fares
 ├── requirements.txt # Project dependencies
 └── README.md # You're reading it!
-
+```
 
 ---
+
 
 🌐 **Live App**: [Click here to try it!](https://cost-of-living.streamlit.app/)
 
