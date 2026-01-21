@@ -1,75 +1,99 @@
 # 🏙️ Cost of Living Predictor
 
-A comprehensive machine learning application that predicts **Rental Prices**, **PG (Paying Guest) Accommodation Rates**, and **Travel Fare Estimates** based on various features such as location, amenities, time, and more. The project utilizes data pipelines and trained models deployed via **Streamlit** for user-friendly web access.
+A comprehensive **machine learning–based web application** that estimates **Rental Prices**, **PG (Paying Guest) Accommodation Costs**, and **Urban Travel Fares** using real-world data and trained predictive models.
+
+The application is built with **Python + Streamlit**, providing a clean and interactive interface for users to explore cost-of-living estimates across major Indian cities.
 
 ---
 
 ## 📌 Project Overview
 
-This project aims to provide users with an estimated cost of living in major Indian cities by combining multiple predictive models:
-- 🏠 **Rent Predictor** (Random Forest)
-- 🛏️ **PG Price Estimator** (Decision Tree)
-- 🚕 **Travel Fare Calculator** (Random Forest)
+This project combines multiple machine learning pipelines to help users understand and compare different components of urban living expenses:
+
+* 🏠 **Rent Price Predictor** – estimates monthly rent using property and location features
+* 🛏️ **PG Cost Estimator** – predicts PG accommodation charges based on amenities and demographics
+* 🚕 **Travel Fare Estimator** – forecasts approximate travel fares using distance and passenger data
+
+Each model is trained independently and integrated into a single Streamlit application.
 
 ---
 
-## 🔍 Features
+## 🔍 Key Features
 
-- Predict rent based on BHK, furnishing, location, area, etc.
-- Estimate PG accommodation costs based on gender, amenities, and city.
-- Forecast Travel fare using pickup/drop coordinates and passenger count.
-- User-friendly interface built using Streamlit.
-- Interactive visualizations for model insights.
+* Rent prediction using **BHK, furnishing type, area, and city**
+* PG price estimation based on **gender, amenities, and location**
+* Travel fare calculation using **pickup/drop coordinates and passenger count**
+* Simple and intuitive **Streamlit UI**
+* Interactive data visualizations for better understanding
+* Pre-trained pipelines for fast inference
 
 ---
 
 ## 💡 Technologies Used
 
-| Area                  | Tech Stack                                    |
-|-----------------------|-----------------------------------------------|
-| Programming Language  | Python 3.x                                    |
-| Web UI                | Streamlit                                     |
-| ML Models             | Random Forest, Decision Tree                  |
-| Preprocessing         | OneHotEncoder, OrdinalEncoder, StandardScaler |
-| Visualization         | Seaborn, Matplotlib                           |
-| Model Saving          | cloudpickle                                   |
-| Version Control       | Git, GitHub, Git LFS                          |
+| Category             | Tools / Libraries                             |
+| -------------------- | --------------------------------------------- |
+| Programming Language | Python 3.x                                    |
+| Web Framework        | Streamlit                                     |
+| Machine Learning     | Random Forest, Decision Tree                  |
+| Data Preprocessing   | OneHotEncoder, OrdinalEncoder, StandardScaler |
+| Visualization        | Seaborn, Matplotlib                           |
+| Model Serialization  | cloudpickle                                   |
+| Version Control      | Git, GitHub, Git LFS                          |
 
 ---
 
-## 📂 Directory Structure
+## 📂 Project Structure
 
- ``` bash
+```bash
 cost-of-living/
-├── app.py # Streamlit app
-├── rent_pipeline.pkl # Trained Rent model
-├── pg_price_pipeline.pkl # Trained PG model
-├── fare_pipeline.pkl # Trained Uber model
-├── rent.csv # Dataset: Rent
-├── pg.csv # Dataset: PG
-├── uber.csv # Dataset: Uber fares
-├── requirements.txt # Project dependencies
-└── README.md # You're reading it!
+├── app.py                    # Streamlit application
+├── rent_pipeline.pkl         # Trained Rent prediction pipeline
+├── pg_price_pipeline.pkl     # Trained PG price pipeline
+├── fare_pipeline.pkl         # Trained Travel fare pipeline
+├── rent.csv                  # Rent dataset
+├── pg.csv                    # PG dataset
+├── uber.csv                  # Travel fare dataset
+├── requirements.txt          # Project dependencies
+└── README.md                 # Project documentation
 ```
 
 ---
 
+## 🚀 Run Locally
 
-🌐 **Live App**: [Click here to try it!](https://cost-of-living.streamlit.app/)
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/your-username/cost-of-living-predictor.git
+cd cost-of-living
+```
+
+### 2️⃣ Create a Virtual Environment (Optional)
+
+```bash
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+```
+
+### 3️⃣ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4️⃣ Launch the App
+
+```bash
+streamlit run app.py
+```
 
 ---
 
-## 🚀 How to Use
+## 📈 Models Used
 
-1. Visit the Streamlit app using the link above.
-2. Enter your inputs in the sidebar:
-   - Rent: city, type, furnishing, BHK, etc.
-   - PG: city, gender, food/wifi/AC availability
-   - Travel: location, passenger count
-3. Click **"Predict"** to see the estimated prices.
+* **Rent Prediction**: Random Forest Regressor
+* **PG Price Estimation**: Decision Tree Regressor
+* **Travel Fare Estimation**: Random Forest Regressor
 
-No installation required — works directly in your browser!
-
-Built with ❤️ by Sruty Saha
-
-
+All models are saved as **pipelines**, ensuring consistent preprocessing during inference.
